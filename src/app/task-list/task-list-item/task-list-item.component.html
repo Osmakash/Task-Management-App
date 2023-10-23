@@ -1,0 +1,22 @@
+<ul class="list-group m-2">
+  <div class="row align-items-center">
+    <div class="col-md-11">
+      <li
+        class="list-group-item pb-0 pt-3"
+        [class.list-group-item-success]="task.done"
+        (click)="onUpdateStatus(task)"
+      >
+        <p>{{ task.title }}</p>
+      </li>
+    </div>
+    <div class="col-md-1">
+      <button
+        type="button"
+        class="btn btn-info"
+        [routerLink]="['/task-detail', task.id]"
+      >
+        <i class="fa fa-eye"> Details</i>
+      </button>
+    </div>
+  </div>
+</ul>

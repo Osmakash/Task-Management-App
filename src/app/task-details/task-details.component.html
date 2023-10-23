@@ -1,0 +1,31 @@
+<div class="container mt-3 p-3">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ task.title }}</h5>
+      <p class="card-text">{{ task.description }}</p>
+      <p class="card-text">Status: {{ task.done ? "Completed" : "Pending" }}</p>
+      <p class="card-text">Created At: {{ task.createdAt | date }}</p>
+      <p class="card-text">Updated At: {{ task.updatedAt | date }}</p>
+    </div>
+  </div>
+  <div class="row mt-3 mx-auto">
+    <div class="col-md-6 mx-auto">
+      <button
+        type="button"
+        class="btn btn-warning w-100"
+        [routerLink]="['/edit-task', task.id]"
+      >
+        Edit
+      </button>
+    </div>
+    <div class="col-md-6 mx-auto">
+      <button
+        type="button"
+        class="btn btn-danger w-100 "
+        (click)="onTaskDeleted(task.id)"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

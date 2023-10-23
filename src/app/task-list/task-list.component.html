@@ -1,0 +1,48 @@
+<div class="row mt-5">
+  <div class="col-md-12 mx-auto">
+    <div class="row mb-4 mx-auto">
+      <div class="col-md-3 mx-auto">
+        <button
+          type="button"
+          class="btn btn-outline-dark btn-light w-100"
+          (click)="getAllTasks()"
+        >
+          All
+        </button>
+      </div>
+      <div class="col-md-5 mx-auto">
+        <button
+          type="button"
+          class="btn btn-outline-dark btn-light w-100"
+          (click)="getCompletedTasks()"
+        >
+          Completed
+        </button>
+      </div>
+      <div class="col-md-4 mx-auto">
+        <button
+          type="button"
+          class="btn btn-outline-dark btn-light w-100"
+          (click)="getPendingTasks()"
+        >
+          Pending
+        </button>
+      </div>
+    </div>
+    <app-task-list-item
+      *ngFor="let task of tasks"
+      [task]="task"
+    ></app-task-list-item>
+    <div class="row mt-4">
+      <div class="col-md-12 text-center m-4">
+        <button
+          type="button"
+          class="btn btn-primary"
+          [routerLink]="'/add-task'"
+        >
+          Add New Task
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

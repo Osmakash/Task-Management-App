@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <h1>Manage Your Tasks</h1>
+  <div class="d-flex flex-column align-items-center justify-content-center">
+    <button
+      type="button"
+      class="btn btn-info m-3 w-75 h-50"
+      [routerLink]="'/tasks'"
+    >
+      View All Tasks
+    </button>
+    <!-- <button type="button" class="btn btn-primary m-3 w-75 h-50">
+      View Completed Tasks
+    </button>
+    <button type="button" class="btn btn-primary m-3 w-75 h-50">
+      View Pending Tasks
+    </button> -->
+    <button type="button" class="btn btn-secondary m-3 w-75 h-50" [routerLink]="'/search'">
+      Search Tasks
+    </button>
+    <button type="button" class="btn btn-primary m-3 w-75 h-50" [routerLink]="'/add-task'">
+      Add Tasks
+    </button>
+  </div>
+</div>

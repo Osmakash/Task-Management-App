@@ -1,0 +1,51 @@
+<div class="container mx-auto">
+  <h2>{{ isEditMode ? "Edit the Task" : "Add New Task" }}</h2>
+  <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+    <div class="form-floating mb-3 mt-4">
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        placeholder="name@example.com"
+        [(ngModel)]="task.title"
+        required
+      />
+      <label for="floatingInput">Title</label>
+    </div>
+    <div class="form-floating">
+      <textarea
+        class="form-control"
+        placeholder="Add the description of the task."
+        id="description"
+        name="description"
+        [(ngModel)]="task.description"
+        style="height: 100px"
+      ></textarea>
+      <label for="floatingTextarea">Description</label>
+    </div>
+    <div class="m-3 row justify-content-between align-items-center">
+      <div class="col-md-3">
+        <label for="done">Status</label>
+      </div>
+      <div class="col-md-9">
+        <input
+          type="checkbox"
+          class="btn-check"
+          name="options-outlined"
+          id="success-outlined"
+          autocomplete="off"
+          [(ngModel)]="task.done"
+        />
+        <label class="btn btn-outline-success" for="success-outlined"
+          >Completed</label
+        >
+      </div>
+    </div>
+    <div class="row mx-auto">
+      <button type="submit" class="btn mx-auto" [ngClass]="isEditMode ? 'btn-success' : 'btn-primary'">
+        {{ isEditMode ? "Update Task" : "Add Task" }}
+      </button>
+    </div>
+  </form>
+</div>
