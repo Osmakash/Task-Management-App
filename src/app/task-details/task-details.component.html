@@ -4,6 +4,8 @@
       <h5 class="card-title">{{ task.title }}</h5>
       <p class="card-text">{{ task.description }}</p>
       <p class="card-text">Status: {{ task.done ? "Completed" : "Pending" }}</p>
+      <p class="card-text">Priority: {{ task.priority }}</p>
+      <p class="card-text">Due Date: {{ task.dueDate | date }}</p>
       <p class="card-text">Created At: {{ task.createdAt | date }}</p>
       <p class="card-text">Updated At: {{ task.updatedAt | date }}</p>
     </div>
@@ -21,7 +23,7 @@
     <div class="col-md-6 mx-auto">
       <button
         type="button"
-        class="btn btn-danger w-100 "
+        class="btn btn-danger w-100"
         (click)="onTaskDeleted(task.id)"
       >
         Delete

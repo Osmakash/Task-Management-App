@@ -13,6 +13,8 @@ export class TaskDetailsComponent implements OnInit {
     id: 0,
     title: '',
     description: '',
+    priority: 'medium',
+    dueDate: new Date(),
     createdAt: new Date(),
     updatedAt: new Date(),
     done: false,

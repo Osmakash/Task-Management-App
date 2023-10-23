@@ -11,6 +11,8 @@ export class TaskService {
       createdAt: new Date('2023-09-01'),
       updatedAt: new Date('2023-09-02'),
       done: false,
+      priority : 'medium',
+      dueDate : new Date('2023-09-01')
     },
     {
       id: 2,
@@ -19,6 +21,8 @@ export class TaskService {
       createdAt: new Date('2023-09-02'),
       updatedAt: new Date('2023-09-03'),
       done: false,
+      priority : 'medium',
+      dueDate : new Date('2023-09-01')
     },
     {
       id: 3,
@@ -27,6 +31,8 @@ export class TaskService {
       createdAt: new Date('2023-09-03'),
       updatedAt: new Date('2023-09-04'),
       done: false,
+      priority : 'medium',
+      dueDate : new Date('2023-09-01')
     },
     {
       id: 4,
@@ -36,6 +42,8 @@ export class TaskService {
       createdAt: new Date('2023-09-04'),
       updatedAt: new Date('2023-09-05'),
       done: false,
+      priority : 'medium',
+      dueDate : new Date('2023-09-01')
     },
   ];
 
